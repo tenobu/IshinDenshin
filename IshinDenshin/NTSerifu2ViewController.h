@@ -1,6 +1,6 @@
 //
 //  NTSerifu2ViewController.h
-//  IsinZensin
+//  IshinDenshin
 //
 //  Created by ビザンコムマック０９ on 2014/09/13.
 //  Copyright (c) 2014年 ビザンコムマック０９. All rights reserved.
