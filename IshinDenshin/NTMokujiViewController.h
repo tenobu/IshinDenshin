@@ -1,5 +1,5 @@
 //
-//  main.m
+//  NTMokujiViewController.h
 //  IsinZensin
 //
 //  Created by ビザンコムマック０９ on 2014/09/12.
@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NTAppDelegate.h"
+@interface NTMokujiViewController : UITableViewController < UITableViewDelegate >
 
-int main(int argc, char * argv[])
-{
-	@autoreleasepool {
-	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([NTAppDelegate class]));
-	}
-}
+@end

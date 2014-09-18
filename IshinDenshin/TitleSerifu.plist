@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>わかれ</key>
+	<array>
+		<array>
+			<string>さようなら</string>
+			<string>またあう日まで</string>
+		</array>
+		<real>9999</real>
+		<false/>
+	</array>
+	<key>あいさつ</key>
+	<array>
+		<integer>1</integer>
+		<false/>
+		<array>
+			<string></string>
+			<string>こんちわ</string>
+			<string>おはよう</string>
+			<string>おはようございます</string>
+			<string>こんにちは</string>
+		</array>
+	</array>
+	<key>日常会話</key>
+	<array>
+		<integer>2</integer>
+		<false/>
+		<array>
+			<string>21</string>
+			<string>22</string>
+			<string>23</string>
+		</array>
+	</array>
+</dict>
+</plist>

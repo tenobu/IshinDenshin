@@ -14,13 +14,19 @@
 		07EA69CB19CA9C0100D2988C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69CA19CA9C0100D2988C /* main.m */; };
 		07EA69CF19CA9C0100D2988C /* NTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69CE19CA9C0100D2988C /* NTAppDelegate.m */; };
 		07EA69D219CA9C0100D2988C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EA69D019CA9C0100D2988C /* Main.storyboard */; };
-		07EA69D519CA9C0100D2988C /* NTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69D419CA9C0100D2988C /* NTViewController.m */; };
 		07EA69D719CA9C0200D2988C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07EA69D619CA9C0200D2988C /* Images.xcassets */; };
 		07EA69DE19CA9C0200D2988C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA69DD19CA9C0200D2988C /* XCTest.framework */; };
 		07EA69DF19CA9C0200D2988C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA69BE19CA9C0100D2988C /* Foundation.framework */; };
 		07EA69E019CA9C0200D2988C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA69C219CA9C0100D2988C /* UIKit.framework */; };
 		07EA69E819CA9C0200D2988C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EA69E619CA9C0200D2988C /* InfoPlist.strings */; };
 		07EA69EA19CA9C0200D2988C /* IshinDenshinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69E919CA9C0200D2988C /* IshinDenshinTests.m */; };
+		07EA69FD19CA9C8700D2988C /* NTAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */; };
+		07EA69FE19CA9C8700D2988C /* NTMokujiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69F619CA9C8700D2988C /* NTMokujiViewController.m */; };
+		07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */; };
+		07EA6A0019CA9C8700D2988C /* NTTableViewCell_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */; };
+		07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69FC19CA9C8700D2988C /* NTToolbar.m */; };
+		07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */; };
+		07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +51,24 @@
 		07EA69CD19CA9C0100D2988C /* NTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTAppDelegate.h; sourceTree = "<group>"; };
 		07EA69CE19CA9C0100D2988C /* NTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTAppDelegate.m; sourceTree = "<group>"; };
 		07EA69D119CA9C0100D2988C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		07EA69D319CA9C0100D2988C /* NTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTViewController.h; sourceTree = "<group>"; };
-		07EA69D419CA9C0100D2988C /* NTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTViewController.m; sourceTree = "<group>"; };
 		07EA69D619CA9C0200D2988C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		07EA69DC19CA9C0200D2988C /* IshinDenshinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IshinDenshinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EA69DD19CA9C0200D2988C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		07EA69E519CA9C0200D2988C /* IshinDenshinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IshinDenshinTests-Info.plist"; sourceTree = "<group>"; };
 		07EA69E719CA9C0200D2988C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EA69E919CA9C0200D2988C /* IshinDenshinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IshinDenshinTests.m; sourceTree = "<group>"; };
+		07EA69F319CA9C8700D2988C /* NTAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAudioRecorder.h; sourceTree = "<group>"; };
+		07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAudioRecorder.m; sourceTree = "<group>"; };
+		07EA69F519CA9C8700D2988C /* NTMokujiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMokujiViewController.h; sourceTree = "<group>"; };
+		07EA69F619CA9C8700D2988C /* NTMokujiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMokujiViewController.m; sourceTree = "<group>"; };
+		07EA69F719CA9C8700D2988C /* NTSerifu2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSerifu2ViewController.h; sourceTree = "<group>"; };
+		07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSerifu2ViewController.m; sourceTree = "<group>"; };
+		07EA69F919CA9C8700D2988C /* NTTableViewCell_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTableViewCell_1.h; sourceTree = "<group>"; };
+		07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTableViewCell_1.m; sourceTree = "<group>"; };
+		07EA69FB19CA9C8700D2988C /* NTToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTToolbar.h; sourceTree = "<group>"; };
+		07EA69FC19CA9C8700D2988C /* NTToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTToolbar.m; sourceTree = "<group>"; };
+		07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OriginalSerifu.plist; sourceTree = "<group>"; };
+		07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TitleSerifu.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +131,16 @@
 				07EA69CD19CA9C0100D2988C /* NTAppDelegate.h */,
 				07EA69CE19CA9C0100D2988C /* NTAppDelegate.m */,
 				07EA69D019CA9C0100D2988C /* Main.storyboard */,
-				07EA69D319CA9C0100D2988C /* NTViewController.h */,
-				07EA69D419CA9C0100D2988C /* NTViewController.m */,
+				07EA69F519CA9C8700D2988C /* NTMokujiViewController.h */,
+				07EA69F619CA9C8700D2988C /* NTMokujiViewController.m */,
+				07EA69FB19CA9C8700D2988C /* NTToolbar.h */,
+				07EA69FC19CA9C8700D2988C /* NTToolbar.m */,
+				07EA69F919CA9C8700D2988C /* NTTableViewCell_1.h */,
+				07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */,
+				07EA69F319CA9C8700D2988C /* NTAudioRecorder.h */,
+				07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */,
+				07EA69F719CA9C8700D2988C /* NTSerifu2ViewController.h */,
+				07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */,
 				07EA69D619CA9C0200D2988C /* Images.xcassets */,
 				07EA69C519CA9C0100D2988C /* Supporting Files */,
 			);
@@ -130,6 +154,8 @@
 				07EA69C719CA9C0100D2988C /* InfoPlist.strings */,
 				07EA69CA19CA9C0100D2988C /* main.m */,
 				07EA69CC19CA9C0100D2988C /* IshinDenshin-Prefix.pch */,
+				07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */,
+				07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,7 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EA69D719CA9C0200D2988C /* Images.xcassets in Resources */,
+				07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */,
 				07EA69C919CA9C0100D2988C /* InfoPlist.strings in Resources */,
+				07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */,
 				07EA69D219CA9C0100D2988C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07EA69D519CA9C0100D2988C /* NTViewController.m in Sources */,
+				07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */,
 				07EA69CF19CA9C0100D2988C /* NTAppDelegate.m in Sources */,
+				07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */,
+				07EA69FD19CA9C8700D2988C /* NTAudioRecorder.m in Sources */,
 				07EA69CB19CA9C0100D2988C /* main.m in Sources */,
+				07EA6A0019CA9C8700D2988C /* NTTableViewCell_1.m in Sources */,
+				07EA69FE19CA9C8700D2988C /* NTMokujiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
