@@ -104,9 +104,55 @@
 
 - (void)setEditEnd
 {
+
+	// 読み込むファイルパスを指定
+	/*NSString *path = [bundle pathForResource:@"TitleSerifu" ofType:@"plist"];
 	
+	// plistの読み込み
+	NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile: path];
 	
-	//string_Serifu = str;
+	// エラーをクリア
+	BOOL bool_errorflag = YES;
+	
+	// Titleの読み込み
+	for ( NSString *key in [dic allKeys] ) {
+		
+		// dirの初期化
+		NSMutableDictionary *dir_data = [[NSMutableDictionary alloc] init];
+		
+		// TitleDataのarray
+		NSArray *array = (NSArray *)[dic objectForKey: key];
+		
+		// TitleDataの読み込み
+		for ( id obj in array ) {
+			
+			// Dataの型を文字列に変換
+			NSString *str = NSStringFromClass( [obj class] );
+			
+			// Dataの型を確認
+			//if ( [NSStringFromClass( [obj class] ) isEqualToString: @"NSNumber"] ) {
+			// 思った通りにNSNumberにならない
+			if ( [str isEqualToString: @"__NSCFNumber"] ) {
+				
+				//NSNumber *number = obj;
+				
+				// 順番を足す
+				[dir_data setObject: obj forKey: @"jyunban"];
+				
+				break;
+				
+			}
+			
+		}
+		
+		// Titleを足す
+		[dir_data setObject: key forKey: @"title"];
+		
+		// dir_dataを足す
+		[array_Mokuji addObject: dir_data];
+		
+	}*/
+	
 	
 }
 

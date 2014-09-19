@@ -28,6 +28,7 @@
 		07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */; };
 		07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */; };
 		07EA6A0819CAA43700D2988C /* NTEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A0719CAA43700D2988C /* NTEditViewController.m */; };
+		07EA6A0A19CBC37700D2988C /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0919CBC37700D2988C /* Property List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TitleSerifu.plist; sourceTree = "<group>"; };
 		07EA6A0619CAA43700D2988C /* NTEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEditViewController.h; sourceTree = "<group>"; };
 		07EA6A0719CAA43700D2988C /* NTEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEditViewController.m; sourceTree = "<group>"; };
+		07EA6A0919CBC37700D2988C /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				07EA69CC19CA9C0100D2988C /* IshinDenshin-Prefix.pch */,
 				07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */,
 				07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */,
+				07EA6A0919CBC37700D2988C /* Property List.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA6A0A19CBC37700D2988C /* Property List.plist in Resources */,
 				07EA69D719CA9C0200D2988C /* Images.xcassets in Resources */,
 				07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */,
 				07EA69C919CA9C0100D2988C /* InfoPlist.strings in Resources */,

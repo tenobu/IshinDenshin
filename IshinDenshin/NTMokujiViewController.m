@@ -52,12 +52,12 @@
 	NSBundle* bundle = [NSBundle mainBundle];
 	
 	// 固定台詞定義
-	//array_Mokuji = [NSArray arrayWithObjects: @"あいさつ", @"日常会話", @"わかれ", nil];
 	array_Mokuji = [[NSMutableArray alloc] init];
 	//dir_Mokuji = [[NSMutableDictionary alloc] init];
 	
 	// 読み込むファイルパスを指定
-	NSString *path = [bundle pathForResource:@"TitleSerifu" ofType:@"plist"];
+	NSString *path = [bundle pathForResource: @"TitleSerifu"
+									  ofType: @"plist"];
 	
 	// plistの読み込み
 	NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile: path];
