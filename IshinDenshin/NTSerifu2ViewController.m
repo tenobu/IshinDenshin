@@ -10,6 +10,7 @@
 
 #import "NTToolbar.h"
 #import <AVFoundation/AVFoundation.h>
+#import "NTEditViewController.h"
 
 @interface NTSerifu2ViewController ()
 {
@@ -151,14 +152,6 @@
 {
 
 	string_Mokuji = str;
-	
-	//for ( NSString *string_mokuji in )
-    /*if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }*/
 
 }
 
@@ -224,32 +217,33 @@ canEditRowAtIndexPath: (NSIndexPath *)indexPath
 
 }
 
-- (void)setEditing: (BOOL)editing
-		  animated: (BOOL)animated
-{
-
-    [super setEditing:editing animated:animated];
-    
-	[self.tableView setEditing:editing animated:YES];
-    
-	/*if (editing) { // 現在編集モードです。
-        
-		UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-																					target:self action:@selector(addRow:)] autorelease];
-        [self.navigationItem setLeftBarButtonItem:addButton animated:YES]; // 追加ボタンを表示します。
-    } else { // 現在通常モードです。
-        [self.navigationItem setLeftBarButtonItem:nil animated:YES]; // 追加ボタンを非表示にします。
-    }*/
-
-}
-
 - (NSIndexPath *)tableView: (UITableView *)tableView
   willSelectRowAtIndexPath: (NSIndexPath *)indexPath
 {
 	
-	[self onnseiOutput: array_Serifu[indexPath.row]];
+	//[self onnseiOutput: array_Serifu[indexPath.row]];
 	
 	return indexPath;
+	
+}
+
+- (void)prepareForSegue: (UIStoryboardSegue *)segue
+				 sender: (id)sender
+{
+	
+	if ( [[segue identifier] isEqualToString: @"showEdit"] ) {
+		
+		id tanmatu = [segue destinationViewController];
+		
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		
+		NSString *str_serifu = array_Serifu[indexPath.row];
+		
+		//[tanmatu setDetailItem: str_serifu];
+		[tanmatu setMokuji: string_Mokuji
+					serifu: str_serifu];
+		
+	}
 	
 }
 

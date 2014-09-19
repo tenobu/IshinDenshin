@@ -130,6 +130,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="0gK-Cg-hLK" kind="push" identifier="showEdit" id="K53-cM-LYX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -144,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="995" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="xh9-aJ-hnw">
             <objects>
-                <viewController id="0gK-Cg-hLK" sceneMemberID="viewController">
+                <viewController id="0gK-Cg-hLK" customClass="NTEditViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="icM-xE-dUQ"/>
                         <viewControllerLayoutGuide type="bottom" id="oiZ-TQ-O9H"/>
@@ -156,17 +159,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ああ" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-GV-kC7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="ああ" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-GV-kC7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="J8h-Sm-THW"/>
+                    <connections>
+                        <outlet property="textView_Edit" destination="Dsw-GV-kC7" id="bzT-K6-sRp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LX-5q-TB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

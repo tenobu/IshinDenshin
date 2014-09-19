@@ -27,6 +27,7 @@
 		07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69FC19CA9C8700D2988C /* NTToolbar.m */; };
 		07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */; };
 		07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */; };
+		07EA6A0819CAA43700D2988C /* NTEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A0719CAA43700D2988C /* NTEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		07EA69FC19CA9C8700D2988C /* NTToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTToolbar.m; sourceTree = "<group>"; };
 		07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OriginalSerifu.plist; sourceTree = "<group>"; };
 		07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TitleSerifu.plist; sourceTree = "<group>"; };
+		07EA6A0619CAA43700D2988C /* NTEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEditViewController.h; sourceTree = "<group>"; };
+		07EA6A0719CAA43700D2988C /* NTEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */,
 				07EA69F719CA9C8700D2988C /* NTSerifu2ViewController.h */,
 				07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */,
+				07EA6A0619CAA43700D2988C /* NTEditViewController.h */,
+				07EA6A0719CAA43700D2988C /* NTEditViewController.m */,
 				07EA69D619CA9C0200D2988C /* Images.xcassets */,
 				07EA69C519CA9C0100D2988C /* Supporting Files */,
 			);
@@ -278,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA6A0819CAA43700D2988C /* NTEditViewController.m in Sources */,
 				07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */,
 				07EA69CF19CA9C0100D2988C /* NTAppDelegate.m in Sources */,
 				07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */,
