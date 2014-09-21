@@ -2,35 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>わかれ</key>
+	<key>オリジナル</key>
 	<array>
 		<array>
-			<string>さようなら</string>
-			<string>またあう日まで</string>
+			<string>わたしは、身障者で口がうまくきけません。</string>
+			<string>お時間の方は大丈夫でしょうか。</string>
+			<string>私の座右の銘は・・・です。</string>
+			<string>こしあんよりも粒あんがいいです。</string>
 		</array>
 		<real>9999</real>
 		<false/>
-	</array>
-	<key>あいさつ</key>
-	<array>
-		<integer>1</integer>
-		<false/>
-		<array>
-			<string>こんちわ</string>
-			<string>おはよう</string>
-			<string>おはようございます</string>
-			<string>こんにちは</string>
-		</array>
 	</array>
 	<key>日常会話</key>
 	<array>
 		<integer>2</integer>
 		<false/>
 		<array>
-			<string>21</string>
-			<string>22</string>
-			<string>23</string>
+			<string>お久しぶりです</string>
+			<string>どういたしまして</string>
+			<string>初めまして</string>
+			<string>ありがとう</string>
+			<string>ありがとうございます</string>
 		</array>
+	</array>
+	<key>あいさつ</key>
+	<array>
+		<integer>1</integer>
+		<false/>
+		<array>
+			<string>おじゃまします</string>
+			<string>こんばんは</string>
+			<string>よろしく</string>
+			<string>おはよう</string>
+			<string>おはようございます</string>
+			<string>こんにちは</string>
+		</array>
+	</array>
+	<key>わかれ</key>
+	<array>
+		<array>
+			<string>いってらっしゃい</string>
+			<string>お疲れ様です</string>
+			<string>お疲れ様でした</string>
+			<string>さようなら</string>
+			<string>またあう日まで</string>
+		</array>
+		<integer>3</integer>
+		<false/>
 	</array>
 </dict>
 </plist>

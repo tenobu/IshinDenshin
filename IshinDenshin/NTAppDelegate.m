@@ -15,7 +15,13 @@
 	
     // Override point for customization after application launch.
 
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+//	NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//	[[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+	
+//	NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//	[[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:appDomain];
+    
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 
 	NSString *init_ver = [ud stringForKey: @"init_version"];
 	if ( [init_ver isEqualToString: @"init_end"] == NO ) {
@@ -25,6 +31,8 @@
 		[ud setObject: @"init_end" forKey: @"init_version"];
 		
 	}
+	
+	[self setReadMokuji];
 	
 	return YES;
 
@@ -112,9 +120,12 @@
 
 	}
 	
-	[ud setObject: array_mokuji forKey: @"array_Mokuji"];
+	NSData *data = [NSKeyedArchiver archivedDataWithRootObject: array_mokuji];
+	
+	[ud setObject: data forKey: @"array_Mokuji"];
 		
 		
+	
 	NSMutableArray *array_original = [[NSMutableArray alloc] init];
 		
 	//読み込むファイルパスを指定
@@ -137,7 +148,128 @@
 				
 	//[array_Original addObject: @"11111"];
 		
-	[ud setObject: array_original forKey: @"array_Originalr"];
+	data = [NSKeyedArchiver archivedDataWithRootObject: array_original];
+	
+	[ud setObject: data forKey: @"array_Original"];
+
+}
+
+- (void)setReadMokuji
+{
+	
+	// 固定台詞定義
+	self.array_Mokuji = [[NSMutableArray alloc] init];
+	//dir_Mokuji = [[NSMutableDictionary alloc] init];
+	
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+	
+	NSData *data = [ud objectForKey: @"array_Mokuji"];
+	
+	self.array_Mokuji = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData: data];
+	
+	// 順番通りにsortする
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"jyunban"
+																   ascending: YES];
+	
+	[self.array_Mokuji sortUsingDescriptors: @[sortDescriptor]];
+	
+	
+	for ( NSDictionary *dir in self.array_Mokuji ) {
+		
+		for ( NSString *key in [dir allKeys] ) {
+			
+			if ( [key isEqualToString: @"jyunban"] ) {
+				
+			} else if ( [key isEqualToString: @"title"] ) {
+				
+			}
+			
+		}
+		
+	}
+		
+}
+
+- (void)setReadSerifu: (NSString *)str_mokuji
+{
+	
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+
+	self.array_Serifu = [ud objectForKey: str_mokuji];
+	
+	if ( self.array_Serifu == nil ) {
+		
+		NSBundle* bundle = [NSBundle mainBundle];
+		
+		//読み込むファイルパスを指定
+		NSString *path = [bundle pathForResource: @"TitleSerifu"
+										  ofType: @"plist"];
+		
+		// plistの読み込み
+		NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile: path];
+		
+		// Titleの読み込み
+		for ( NSString *key in [dic allKeys] ) {
+			
+			if ( [key isEqualToString: str_mokuji] ) {
+
+				NSMutableArray *array_data = [[NSMutableArray alloc] init];
+				
+				NSArray *array = (NSArray *)[dic objectForKey: str_mokuji];
+				
+				for ( id obj in array ) {
+					
+					// Dataの型を文字列に変換
+					NSString *str = NSStringFromClass( [obj class] );
+					
+					// Dataの型を確認
+					if ( [str isEqualToString: @"__NSCFArray"] ) {
+						
+						// NSArrayを入れる
+						NSArray *array_read = (NSArray *)obj;
+						
+						for ( NSString *str in array_read ) {
+
+							[array_data addObject: str];
+							
+						}
+
+						break;
+						
+					}
+					
+				}
+				
+				[ud setObject: array_data forKey: str_mokuji];
+				
+				continue;
+				
+			}
+			
+		}
+		
+		self.array_Serifu = [ud objectForKey: str_mokuji];
+		
+	}
+	
+}
+
+- (void)setNewSerifu: (NSString *)str_new
+{
+
+	for ( NSInteger i = 0; i < [self.array_Serifu count]; i ++ ) {
+		
+		if ( [[self.array_Serifu objectAtIndex: i] isEqualToString: self.string_Serifu] ) {
+			
+			[self.array_Serifu setObject: str_new atIndexedSubscript: i];
+			
+		}
+	
+	}
+	
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+
+	[ud setObject: self.array_Serifu forKey: self.string_Mokuji];
 
 }
 

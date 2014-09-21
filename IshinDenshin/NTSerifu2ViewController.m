@@ -8,8 +8,8 @@
 
 #import "NTSerifu2ViewController.h"
 
+#import "NTAppDelegate.h"
 #import "NTToolbar.h"
-#import <AVFoundation/AVFoundation.h>
 #import "NTEditViewController.h"
 
 @interface NTSerifu2ViewController ()
@@ -17,12 +17,10 @@
 	
 @private
 	
-	NSString *string_Link;
+	/*NSString *string_Link;
 
 	NSString *string_Mokuji;
-	NSArray *array_Serifu;
-	
-	AVSpeechSynthesizer *speechSynthesizer;
+	NSArray *array_Serifu;*/
 	
 }
 
@@ -48,7 +46,18 @@
 	
     [super viewDidLoad];
 	
-	NSBundle* bundle = [NSBundle mainBundle];
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+	[app setReadSerifu: app.string_Mokuji];
+	
+	
+	
+	
+	
+	
+	
+	
+	/*NSBundle* bundle = [NSBundle mainBundle];
 	
 	//読み込むファイルパスを指定
 	NSString *path = [bundle pathForResource: @"TitleSerifu"
@@ -99,13 +108,10 @@
 	// エラー処理
 	if ( bool_errorflag ) {
 		
-	}
+	}*/
 	
 	// テーブルデリを設定
 	self.tableView.delegate = self;
-	
-	// 音声合成を初期化
-	speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
 	
 	
 	/*self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -151,7 +157,9 @@
 - (void)setDetailItem: (NSString *)str
 {
 
-	string_Mokuji = str;
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+	app.string_Mokuji = str;
 
 }
 
@@ -166,7 +174,9 @@
  numberOfRowsInSection: (NSInteger)section
 {
 	
-	return [array_Serifu count];
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+	return [app.array_Serifu count];
 		
 }
 
@@ -177,7 +187,9 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell"
 															forIndexPath: indexPath];
 	
-	cell.textLabel.text = [array_Serifu objectAtIndex: indexPath.row];
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+	cell.textLabel.text = [app.array_Serifu objectAtIndex: indexPath.row];
 	
     return cell;
 	
@@ -237,31 +249,14 @@ canEditRowAtIndexPath: (NSIndexPath *)indexPath
 		
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		
-		NSString *str_serifu = array_Serifu[indexPath.row];
+		NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+		app.string_Serifu = app.array_Serifu[indexPath.row];
 		
-		//[tanmatu setDetailItem: str_serifu];
-		[tanmatu setMokuji: string_Mokuji
-					serifu: str_serifu];
+		[tanmatu setMokuji: app.string_Mokuji
+					serifu: app.string_Serifu];
 		
 	}
-	
-}
-
-- (void)onnseiOutput: (NSString *)string
-{
-	
-	//NSLog(@"%@", string);
-	
-	AVSpeechUtterance      *utterance = [AVSpeechUtterance speechUtteranceWithString: string];
-	AVSpeechSynthesisVoice *JVoice    = [AVSpeechSynthesisVoice voiceWithLanguage: @"ja-JP"];
-	
-	// 音声の日本語化
-	utterance.voice =  JVoice;
-	
-	// NSLog( @"bool_AudioResult == %d", bool_AudioResult );
-	
-	// 音声の発生
-	[speechSynthesizer speakUtterance: utterance];
 	
 }
 

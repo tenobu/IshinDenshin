@@ -8,6 +8,9 @@
 
 #import "NTEditViewController.h"
 
+#import "NTAppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+
 @interface NTEditViewController ()
 {
 	
@@ -16,6 +19,8 @@
 	NSString *string_Mokuji, *string_Serifu;
 	
 	UIBarButtonItem *editButton;
+	
+	AVSpeechSynthesizer *speechSynthesizer;
 
 }
 
@@ -41,6 +46,8 @@
 
     [super viewDidLoad];
 
+	self.navigationItem.title = @"台詞";
+
 	//self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	editButton = [[UIBarButtonItem alloc] initWithTitle: @"編集"
 												  style: UIBarButtonItemStyleDone
@@ -50,7 +57,19 @@
 	self.navigationItem.rightBarButtonItem = editButton;
 	
 	self.textView_Edit.text = string_Serifu;
+
+	// 音声合成を初期化
+	speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
 	
+
+//	NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+//    // キーボード表示時
+//    [notification addObserver:self selector:@selector(keyboardWillShow:)
+//						 name: UIKeyboardWillShowNotification object:nil];
+//    // キーボード非表示時
+//	[notification addObserver:self selector:@selector(keyboardWillHide:)
+//						 name: UIKeyboardWillHideNotification object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +105,49 @@
 	
 }
 
+//- (void)keyboardWillShow:(NSNotification *)notificatioin
+//{
+//    // ここでTextFieldやTextViewの位置を変更する
+//    NSLog(@"keyboardWillShow");
+//    
+//    // キーボードに合わせたアニメーション処理
+//    [UIView animateWithDuration:0.3f
+//                     animations:^{
+//                         
+//                         // TextFieldのframe
+//                         CGRect viewRect  = self.textView_Edit.frame;
+//                         
+//                         // キーボードのサイズを取得
+//                         CGRect keybord;
+//                         [[notificatioin.userInfo valueForKey: UIKeyboardBoundsUserInfoKey] getValue: &keybord];
+//                         
+//                         // TextFieldの位置から(元のY座標+TextViewの高さ) - (Viewの高さ - キーボード)分、上げる(マイナスする)
+//                         viewRect.origin.y -= ((266.0f+viewRect.size.height)-(self.view.frame.size.height - keybord.size.height));
+//                         self.textView_Edit.frame = viewRect;
+//                     }];
+//}
+//
+///*
+// *  キーボード非表示
+// */
+//- (void)keyboardWillHide:(NSNotification *)notificatioin
+//{
+//    // ここでTextFieldやTextViewの位置を戻す
+//    NSLog(@"keyboardWillHide");
+//    
+//    // キーボードに合わせたアニメーション処理
+//    [UIView animateWithDuration:0.3f
+//                     animations:^{
+//                         
+//                         // TextFieldのframe
+//                         CGRect viewRect  = self.textView_Edit.frame;
+//                         
+//                         // TextFieldのY座標を元の位置に定義
+//                         viewRect.origin.y = 266.0f;
+//                         self.textView_Edit.frame = viewRect;
+//                     }];
+//}
+
 /*- (void)setDetailItem: (NSString *)str
 {
 	
@@ -105,6 +167,13 @@
 - (void)setEditEnd
 {
 
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+	
+	NSString *str_old = app.string_Serifu;
+	NSString *str_new = self.textView_Edit.text;
+	
+	[app setNewSerifu: str_new];
+	
 	// 読み込むファイルパスを指定
 	/*NSString *path = [bundle pathForResource:@"TitleSerifu" ofType:@"plist"];
 	
@@ -153,6 +222,31 @@
 		
 	}*/
 	
+	
+}
+
+- (IBAction)button_Action:(id)sender
+{
+
+	[self onnseiOutput: self.textView_Edit.text];
+	
+}
+
+- (void)onnseiOutput: (NSString *)string
+{
+	
+	//NSLog(@"%@", string);
+	
+	AVSpeechUtterance      *utterance = [AVSpeechUtterance speechUtteranceWithString: string];
+	AVSpeechSynthesisVoice *JVoice    = [AVSpeechSynthesisVoice voiceWithLanguage: @"ja-JP"];
+	
+	// 音声の日本語化
+	utterance.voice =  JVoice;
+	
+	// NSLog( @"bool_AudioResult == %d", bool_AudioResult );
+	
+	// 音声の発生
+	[speechSynthesizer speakUtterance: utterance];
 	
 }
 

@@ -25,10 +25,11 @@
 		07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */; };
 		07EA6A0019CA9C8700D2988C /* NTTableViewCell_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */; };
 		07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA69FC19CA9C8700D2988C /* NTToolbar.m */; };
-		07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */; };
-		07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */; };
 		07EA6A0819CAA43700D2988C /* NTEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A0719CAA43700D2988C /* NTEditViewController.m */; };
-		07EA6A0A19CBC37700D2988C /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0919CBC37700D2988C /* Property List.plist */; };
+		07EA6A1019CBFFDE00D2988C /* OriginalSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A0F19CBFFDE00D2988C /* OriginalSerifu.plist */; };
+		07EA6A1219CBFFF400D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A1119CBFFF400D2988C /* TitleSerifu.plist */; };
+		07EA6A1519CD5BC900D2988C /* NTTableViewCell_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A1419CD5BC900D2988C /* NTTableViewCell_2.m */; };
+		07EA6A1819CD605B00D2988C /* NTRokuonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +70,14 @@
 		07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTableViewCell_1.m; sourceTree = "<group>"; };
 		07EA69FB19CA9C8700D2988C /* NTToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTToolbar.h; sourceTree = "<group>"; };
 		07EA69FC19CA9C8700D2988C /* NTToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTToolbar.m; sourceTree = "<group>"; };
-		07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OriginalSerifu.plist; sourceTree = "<group>"; };
-		07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TitleSerifu.plist; sourceTree = "<group>"; };
 		07EA6A0619CAA43700D2988C /* NTEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEditViewController.h; sourceTree = "<group>"; };
 		07EA6A0719CAA43700D2988C /* NTEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEditViewController.m; sourceTree = "<group>"; };
-		07EA6A0919CBC37700D2988C /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		07EA6A0F19CBFFDE00D2988C /* OriginalSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OriginalSerifu.plist; sourceTree = "<group>"; };
+		07EA6A1119CBFFF400D2988C /* TitleSerifu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TitleSerifu.plist; sourceTree = "<group>"; };
+		07EA6A1319CD5BC900D2988C /* NTTableViewCell_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTableViewCell_2.h; sourceTree = "<group>"; };
+		07EA6A1419CD5BC900D2988C /* NTTableViewCell_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTableViewCell_2.m; sourceTree = "<group>"; };
+		07EA6A1619CD605B00D2988C /* NTRokuonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRokuonViewController.h; sourceTree = "<group>"; };
+		07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRokuonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,10 @@
 				07EA69FC19CA9C8700D2988C /* NTToolbar.m */,
 				07EA69F919CA9C8700D2988C /* NTTableViewCell_1.h */,
 				07EA69FA19CA9C8700D2988C /* NTTableViewCell_1.m */,
+				07EA6A1319CD5BC900D2988C /* NTTableViewCell_2.h */,
+				07EA6A1419CD5BC900D2988C /* NTTableViewCell_2.m */,
+				07EA6A1619CD605B00D2988C /* NTRokuonViewController.h */,
+				07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */,
 				07EA69F319CA9C8700D2988C /* NTAudioRecorder.h */,
 				07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */,
 				07EA69F719CA9C8700D2988C /* NTSerifu2ViewController.h */,
@@ -161,9 +169,8 @@
 				07EA69C719CA9C0100D2988C /* InfoPlist.strings */,
 				07EA69CA19CA9C0100D2988C /* main.m */,
 				07EA69CC19CA9C0100D2988C /* IshinDenshin-Prefix.pch */,
-				07EA6A0319CA9CBF00D2988C /* TitleSerifu.plist */,
-				07EA6A0219CA9CBF00D2988C /* OriginalSerifu.plist */,
-				07EA6A0919CBC37700D2988C /* Property List.plist */,
+				07EA6A1119CBFFF400D2988C /* TitleSerifu.plist */,
+				07EA6A0F19CBFFDE00D2988C /* OriginalSerifu.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -263,11 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07EA6A0A19CBC37700D2988C /* Property List.plist in Resources */,
 				07EA69D719CA9C0200D2988C /* Images.xcassets in Resources */,
-				07EA6A0419CA9CBF00D2988C /* OriginalSerifu.plist in Resources */,
+				07EA6A1019CBFFDE00D2988C /* OriginalSerifu.plist in Resources */,
 				07EA69C919CA9C0100D2988C /* InfoPlist.strings in Resources */,
-				07EA6A0519CA9CBF00D2988C /* TitleSerifu.plist in Resources */,
+				07EA6A1219CBFFF400D2988C /* TitleSerifu.plist in Resources */,
 				07EA69D219CA9C0100D2988C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,11 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA6A1519CD5BC900D2988C /* NTTableViewCell_2.m in Sources */,
 				07EA6A0819CAA43700D2988C /* NTEditViewController.m in Sources */,
 				07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */,
 				07EA69CF19CA9C0100D2988C /* NTAppDelegate.m in Sources */,
 				07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */,
 				07EA69FD19CA9C8700D2988C /* NTAudioRecorder.m in Sources */,
+				07EA6A1819CD605B00D2988C /* NTRokuonViewController.m in Sources */,
 				07EA69CB19CA9C0100D2988C /* main.m in Sources */,
 				07EA6A0019CA9C8700D2988C /* NTTableViewCell_1.m in Sources */,
 				07EA69FE19CA9C8700D2988C /* NTMokujiViewController.m in Sources */,
