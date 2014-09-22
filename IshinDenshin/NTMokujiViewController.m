@@ -14,11 +14,16 @@
 #import "NTTableViewCell_1.h"
 #import "NTTableViewCell_2.h"
 #import <AVFoundation/AVFoundation.h>
+#import "NTAudioRecorder.h"
 
 @interface NTMokujiViewController ()
 {
 
 @private
+
+	NTAudioRecorder *audioRec;
+	
+	NSTimer *timer_Rocord;
 	
 }
 
@@ -326,6 +331,45 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 	/*[self performSegueWithIdentifier: @"showDetail"
 	 sender: [NSString stringWithFormat:@"%d", indexPath.row + 1]];*/
 	
+}
+
+- (IBAction)rokuon_Action:(id)sender
+{
+
+	UISwitch *switch_rokuon = (UISwitch *)sender;
+	
+	if ( switch_rokuon.on == YES ) {
+
+		audioRec = [[NTAudioRecorder alloc] init];
+		
+		[audioRec record];
+		
+		timer_Rocord = [NSTimer scheduledTimerWithTimeInterval: 1.0f
+														target: self
+													  selector: @selector(rokuon_Timer:)
+													  userInfo: nil
+													   repeats: YES];
+						  
+	} else {
+		
+		[audioRec stop];
+		
+		NSDate *now_date = [NSDate new];
+		
+		NSDateFormatter *dateForm = [[NSDateFormatter alloc] init];
+		
+		dateForm.dateFormat = @"yyyyMMdd HHmmss";
+		
+		NSString *str_date = [dateForm stringFromDate: now_date];
+		
+		
+	}
+	
+}
+
+- (void)rokuon_Timer: (NSTimer*)timer
+{
+
 }
 
 @end
