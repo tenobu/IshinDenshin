@@ -30,6 +30,7 @@
 		07EA6A1219CBFFF400D2988C /* TitleSerifu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EA6A1119CBFFF400D2988C /* TitleSerifu.plist */; };
 		07EA6A1519CD5BC900D2988C /* NTTableViewCell_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A1419CD5BC900D2988C /* NTTableViewCell_2.m */; };
 		07EA6A1819CD605B00D2988C /* NTRokuonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */; };
+		07EA6A1B19CFBF8100D2988C /* NTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA6A1A19CFBF8100D2988C /* NTAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		07EA6A1419CD5BC900D2988C /* NTTableViewCell_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTableViewCell_2.m; sourceTree = "<group>"; };
 		07EA6A1619CD605B00D2988C /* NTRokuonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRokuonViewController.h; sourceTree = "<group>"; };
 		07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRokuonViewController.m; sourceTree = "<group>"; };
+		07EA6A1919CFBF8100D2988C /* NTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAudioPlayer.h; sourceTree = "<group>"; };
+		07EA6A1A19CFBF8100D2988C /* NTAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				07EA6A1719CD605B00D2988C /* NTRokuonViewController.m */,
 				07EA69F319CA9C8700D2988C /* NTAudioRecorder.h */,
 				07EA69F419CA9C8700D2988C /* NTAudioRecorder.m */,
+				07EA6A1919CFBF8100D2988C /* NTAudioPlayer.h */,
+				07EA6A1A19CFBF8100D2988C /* NTAudioPlayer.m */,
 				07EA69F719CA9C8700D2988C /* NTSerifu2ViewController.h */,
 				07EA69F819CA9C8700D2988C /* NTSerifu2ViewController.m */,
 				07EA6A0619CAA43700D2988C /* NTEditViewController.h */,
@@ -298,6 +303,7 @@
 				07EA69FF19CA9C8700D2988C /* NTSerifu2ViewController.m in Sources */,
 				07EA69CF19CA9C0100D2988C /* NTAppDelegate.m in Sources */,
 				07EA6A0119CA9C8700D2988C /* NTToolbar.m in Sources */,
+				07EA6A1B19CFBF8100D2988C /* NTAudioPlayer.m in Sources */,
 				07EA69FD19CA9C8700D2988C /* NTAudioRecorder.m in Sources */,
 				07EA6A1819CD605B00D2988C /* NTRokuonViewController.m in Sources */,
 				07EA69CB19CA9C0100D2988C /* main.m in Sources */,

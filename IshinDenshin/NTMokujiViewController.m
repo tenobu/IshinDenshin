@@ -354,14 +354,15 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 		
 		[audioRec stop];
 		
-		NSDate *now_date = [NSDate new];
+		/*NSDate *now_date = [NSDate new];
 		
 		NSDateFormatter *dateForm = [[NSDateFormatter alloc] init];
 		
 		dateForm.dateFormat = @"yyyyMMdd HHmmss";
 		
-		NSString *str_date = [dateForm stringFromDate: now_date];
+		NSString *str_date = [dateForm stringFromDate: now_date];*/
 		
+		[audioRec play];
 		
 	}
 	
