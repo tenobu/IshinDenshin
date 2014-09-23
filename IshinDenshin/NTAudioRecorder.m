@@ -11,24 +11,13 @@
 
 @implementation NTAudioRecorder
 
-/*- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSDate* date = [NSDate date];
-    [defaults setObject:date forKey:@"DATE"];
-    
-}*/
-
-
-
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+- (void)audioPlayerDidFinishPlaying: (AVAudioPlayer *)player
+					   successfully: (BOOL)flag
 {
 	//    [player release];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
@@ -40,24 +29,21 @@
     
 	NSError *error = nil;
 	
-	self.session = [AVAudioSession sharedInstance];
-    
-	// 使用している機種が録音に対応しているか
-    if ( self.session.inputAvailable ) {
-    
-		[self.session setCategory: AVAudioSessionCategoryPlayAndRecord
+	if ( audioSession.inputAvailable ) {
+	 
+		[audioSession setCategory: AVAudioSessionCategoryPlayAndRecord
 							error: &error];
-    
-	}
-    
-	if ( error ) {
-		
-        NSLog(@"audioSession: %@ %d %@", [error domain], [error code], [[error userInfo] description]);
-    
+
+		if ( error ) {
+			
+			NSLog(@"audioSession: %@ %d %@", [error domain], [error code], [[error userInfo] description]);
+			
+		}
+
 	}
     
 	// 録音機能をアクティブにする
-    [audioSession setActive:YES error:&error];
+    [audioSession setActive:YES error: &error];
     
 	if ( error ) {
     
@@ -73,20 +59,6 @@
 	NSString *path = [documentDir stringByAppendingPathComponent: @"rec.caf"];
     
 	NSURL *recordingURL = [NSURL fileURLWithPath: path];
-    
-    /*
-	 
-	 NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-	 [NSNumber numberWithFloat: 44100.0], AVSampleRateKey,
-	 [NSNumber numberWithInt: kAudioFormatLinearPCM], AVFormatIDKey,
-	 [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,
-	 [NSNumber numberWithInt:16], AVLinearPCMBitDepthKey,
-	 [NSNumber numberWithBool:NO], AVLinearPCMIsBigEndianKey,
-	 [NSNumber numberWithBool:NO], AVLinearPCMIsFloatKey,
-	 nil];
-	 
-	 AvRecorder = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&error];
-	 */
     
     // 録音中に音量をとる場合はYES
 	//    AvRecorder.meteringEnabled = YES;
@@ -105,9 +77,6 @@
     
 	avRecorder.delegate = self;
 	
-	//    ５秒録音して終了
-	//    [avRecorder recordForDuration: 5.0];
-    
     [avRecorder record];
 
 }
@@ -154,6 +123,13 @@
     
 	[avPlayer play];
     
+}
+
+- (NSTimeInterval)time
+{
+
+	return [avRecorder currentTime];
+
 }
 
 - (void)pause

@@ -22,10 +22,11 @@
 
 //- (id)init;
 - (void)record;
+- (NSTimeInterval)time;
 - (void)stop;
 - (void)play;
 
-@property (nonatomic) AVAudioSession *session;
+//@property (nonatomic) AVAudioSession *session;
 @property (nonatomic) AVAudioPlayer  *player;
 
 @end

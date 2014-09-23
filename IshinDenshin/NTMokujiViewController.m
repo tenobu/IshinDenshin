@@ -64,29 +64,29 @@
 																			   action: @selector(insertNewObject:)];
 	self.navigationItem.rightBarButtonItem = addButton;*/
 
-	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd
-																			   target: self
-																			   action: @selector(insertNewObject:)];
+//	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd
+//																			   target: self
+//																			   action: @selector(insertNewObject:)];
 	
 	/*UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCamera
 																				target: self
 																				action: @selector(cancel:)];*/
-	UIBarButtonItem *editButton = self.editButtonItem;
-	
-	editButton.style = UIBarButtonItemStyleBordered;
-	
-	UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-	
-	NTToolbar *toolbar = [[NTToolbar alloc] initWithFrame: CGRectMake( 0.0f, 0.0f, 110.0f, 44.0f )];
-	
-	toolbar.backgroundColor = [UIColor clearColor];
-	toolbar.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-	
-	UIBarButtonItem *toolbarBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:toolbar];
-
-	toolbar.items = [NSArray arrayWithObjects:space, editButton, addButton, nil];
-	
-	self.navigationItem.rightBarButtonItem = toolbarBarButtonItem;
+//	UIBarButtonItem *editButton = self.editButtonItem;
+//	
+//	editButton.style = UIBarButtonItemStyleBordered;
+//	
+//	UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+//	
+//	NTToolbar *toolbar = [[NTToolbar alloc] initWithFrame: CGRectMake( 0.0f, 0.0f, 110.0f, 44.0f )];
+//	
+//	toolbar.backgroundColor = [UIColor clearColor];
+//	toolbar.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//	
+//	UIBarButtonItem *toolbarBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:toolbar];
+//
+//	toolbar.items = [NSArray arrayWithObjects:space, editButton, addButton, nil];
+//	
+//	self.navigationItem.rightBarButtonItem = toolbarBarButtonItem;
 	
 }
 
@@ -371,6 +371,22 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 - (void)rokuon_Timer: (NSTimer*)timer
 {
 
+	NSTimeInterval time = [audioRec time];
+
+	NSInteger hh = time / ( 60 * 60 );
+	
+	time -= hh * 60 * 60;
+	
+	NSInteger mm = time / 60;
+	
+	time -= mm * 60 * 60;
+
+	NSInteger ss = time;
+	
+	NSString *str_time = [NSString stringWithFormat: @"%d:%d:%d", hh, mm, ss];
+	
+	//self.label_Timer.text = str_time;
+	
 }
 
 @end

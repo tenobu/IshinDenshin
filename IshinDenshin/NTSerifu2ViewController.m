@@ -197,13 +197,17 @@
 
 - (void)insertNewObject:(id)sender
 {
+
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+	[app.array_Serifu insertObject: @"オリジナル"
+						   atIndex: [app.array_Serifu count]];
 	
-    /*if (!_objects) {
-	 _objects = [[NSMutableArray alloc] init];
-	 }
-	 [_objects insertObject:[NSDate date] atIndex:0];
-	 NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-	 [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];*/
+	//NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+	
+	//[self.tableView insertRowsAtIndexPaths: @[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];*/
+
+	[self.tableView reloadData];
 	
 }
 
@@ -219,14 +223,34 @@ canEditRowAtIndexPath: (NSIndexPath *)indexPath
 		   editingStyleForRowAtIndexPath: (NSIndexPath *)indexPath
 {
 
-	if (indexPath.row == 1) {
-
-		return UITableViewCellEditingStyleInsert;
-	
-	}
+//	if (indexPath.row == 1) {
+//
+//		return UITableViewCellEditingStyleInsert;
+//	
+//	}
 	
 	return UITableViewCellEditingStyleDelete;
 
+}
+
+- (void) tableView: (UITableView *)tableView
+commitEditingStyle: (UITableViewCellEditingStyle)editingStyle
+ forRowAtIndexPath: (NSIndexPath *)indexPath
+{
+    
+	if ( editingStyle == UITableViewCellEditingStyleDelete ) {
+        
+		NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+
+		[app.array_Serifu removeObjectAtIndex: indexPath.row];
+       
+		[self.tableView deleteRowsAtIndexPaths: [NSArray arrayWithObject: indexPath]
+							  withRowAnimation: UITableViewRowAnimationFade];
+    
+	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
+
+    }
+	
 }
 
 - (NSIndexPath *)tableView: (UITableView *)tableView

@@ -120,6 +120,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qAd-6I-mwt"/>
+                    <connections>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUN-hN-oxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
