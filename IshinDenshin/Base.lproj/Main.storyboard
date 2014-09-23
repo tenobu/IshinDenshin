@@ -40,6 +40,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="rokuon_Action:" destination="PpY-S6-eSV" eventType="valueChanged" id="QTo-cl-tjz"/>
+                                                <action selector="switch_Action:" destination="bbG-8X-EXy" eventType="valueChanged" id="dq6-0W-TiL"/>
                                             </connections>
                                         </switch>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="録音停止" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zin-Fs-bvt">
@@ -70,6 +71,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="label_Time" destination="FDi-zs-exw" id="Mq1-IW-EfG"/>
                                     <outlet property="switch_Rokuon" destination="vuR-kp-2NO" id="8qW-R6-bpu"/>
                                 </connections>
                             </tableViewCell>
@@ -120,8 +122,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qAd-6I-mwt"/>
-                    <connections>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUN-hN-oxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

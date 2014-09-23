@@ -21,12 +21,14 @@
 }
 
 //- (id)init;
-- (void)record;
+- (void)record: (NSString *)str_date;
 - (NSTimeInterval)time;
 - (void)stop;
-- (void)play;
+- (void)play: (NSString *)str_date;
 
 //@property (nonatomic) AVAudioSession *session;
 @property (nonatomic) AVAudioPlayer  *player;
+
+@property NSString *string_Filename;
 
 @end

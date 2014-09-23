@@ -22,7 +22,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void)record
+- (void)record: (NSString *)str_date
 {
 
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -56,7 +56,8 @@
     
 	NSString *documentDir = [filePaths objectAtIndex: 0];
     
-	NSString *path = [documentDir stringByAppendingPathComponent: @"rec.caf"];
+	self.string_Filename = [NSString stringWithFormat: @"%@.caf", str_date];
+	NSString *path = [documentDir stringByAppendingPathComponent: self.string_Filename];
     
 	NSURL *recordingURL = [NSURL fileURLWithPath: path];
     
@@ -100,7 +101,7 @@
     
 }
 
-- (void)play
+- (void)play: (NSString *)str_date
 {
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -112,7 +113,8 @@
 	
     NSString *documentDir = [filePaths objectAtIndex: 0];
     
-	NSString *path = [documentDir stringByAppendingPathComponent: @"rec.caf"];
+	//NSString *file = [NSString stringWithFormat: @"%@.caf", str_date];
+	NSString *path = [documentDir stringByAppendingPathComponent: self.string_Filename];
     
 	NSURL *recordingURL = [NSURL fileURLWithPath: path];
     

@@ -30,6 +30,8 @@
 @property NSMutableArray *array_Serifu;
 @property NSString       *string_Serifu;
 
+@property NSMutableArray *array_Rokuon;
+
 - (void)setReadMokuji;
 - (void)setReadSerifu: (NSString *)str_mokuji;
 - (void)setNewSerifu: (NSString *)str_new;

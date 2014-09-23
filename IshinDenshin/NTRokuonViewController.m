@@ -8,6 +8,8 @@
 
 #import "NTRokuonViewController.h"
 
+#import "NTAppDelegate.h"
+
 @interface NTRokuonViewController ()
 
 @end
@@ -52,15 +54,34 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
-    return 0;
+    return 1;
 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 0;
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
 
+    return [app.array_Rokuon count];
+
+}
+
+- (UITableViewCell *)tableView: (UITableView *)tableView
+		 cellForRowAtIndexPath: (NSIndexPath *)indexPath
+{
+    
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell"
+															forIndexPath: indexPath];
+	
+	NTAppDelegate *app = [[UIApplication sharedApplication] delegate];
+	
+	NSDictionary *dir = [app.array_Rokuon objectAtIndex: indexPath.row];
+	
+	cell.textLabel.text = [dir objectForKey: @"date_time"];
+	
+    return cell;
+	
 }
 
 /*

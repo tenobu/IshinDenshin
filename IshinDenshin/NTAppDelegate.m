@@ -34,6 +34,8 @@
 	
 	[self setReadMokuji];
 	
+	//[self setReadRokuon];
+	
 	return YES;
 
 }
@@ -271,6 +273,47 @@
 
 	[ud setObject: self.array_Serifu forKey: self.string_Mokuji];
 
+}
+
+- (void)setReadRokuon
+{
+	
+	self.array_Rokuon = [[NSMutableArray alloc] init];
+	
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+	
+	NSData *data = [ud objectForKey: @"array_Rokuon"];
+	
+	self.array_Rokuon = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData: data];
+	
+	// 順番通りにsortする
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"filename"
+																   ascending: YES];
+	
+	[self.array_Rokuon sortUsingDescriptors: @[sortDescriptor]];
+	
+}
+
+- (void)setSaveRokuon
+{
+	
+	
+	
+	
+	self.array_Rokuon = [[NSMutableArray alloc] init];
+	
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+	
+	NSData *data = [ud objectForKey: @"array_Rokuon"];
+	
+	self.array_Rokuon = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData: data];
+	
+	// 順番通りにsortする
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"filename"
+																   ascending: YES];
+	
+	[self.array_Rokuon sortUsingDescriptors: @[sortDescriptor]];
+	
 }
 
 @end

@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NTAudioRecorder.h"
+
 @interface NTTableViewCell_1 : UITableViewCell
+{
+	
+	NTAudioRecorder *audioRec;
+	
+	NSTimer *timer_Rocord;
+	
+}
 
 @property (weak, nonatomic) IBOutlet UISwitch *switch_Rokuon;
+@property (weak, nonatomic) IBOutlet UILabel *label_Time;
 
 @end

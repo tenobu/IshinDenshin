@@ -21,9 +21,9 @@
 
 @private
 
-	NTAudioRecorder *audioRec;
-	
-	NSTimer *timer_Rocord;
+//	NTAudioRecorder *audioRec;
+//	
+//	NSTimer *timer_Rocord;
 	
 }
 
@@ -263,7 +263,8 @@ commitEditingStyle: (UITableViewCellEditingStyle)editingStyle
 
 		} else if ( row == 1 ) {
 			
-			return indexPath;
+			return nil;
+			//return indexPath;
 			
 		}
 		
@@ -336,54 +337,54 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 - (IBAction)rokuon_Action:(id)sender
 {
 
-	UISwitch *switch_rokuon = (UISwitch *)sender;
-	
-	if ( switch_rokuon.on == YES ) {
-
-		audioRec = [[NTAudioRecorder alloc] init];
-		
-		[audioRec record];
-		
-		timer_Rocord = [NSTimer scheduledTimerWithTimeInterval: 1.0f
-														target: self
-													  selector: @selector(rokuon_Timer:)
-													  userInfo: nil
-													   repeats: YES];
-						  
-	} else {
-		
-		[audioRec stop];
-		
-		/*NSDate *now_date = [NSDate new];
-		
-		NSDateFormatter *dateForm = [[NSDateFormatter alloc] init];
-		
-		dateForm.dateFormat = @"yyyyMMdd HHmmss";
-		
-		NSString *str_date = [dateForm stringFromDate: now_date];*/
-		
-		[audioRec play];
-		
-	}
+//	UISwitch *switch_rokuon = (UISwitch *)sender;
+//	
+//	if ( switch_rokuon.on == YES ) {
+//
+//		audioRec = [[NTAudioRecorder alloc] init];
+//		
+//		[audioRec record];
+//		
+//		timer_Rocord = [NSTimer scheduledTimerWithTimeInterval: 1.0f
+//														target: self
+//													  selector: @selector(rokuon_Timer:)
+//													  userInfo: nil
+//													   repeats: YES];
+//						  
+//	} else {
+//		
+//		[audioRec stop];
+//		
+//		/*NSDate *now_date = [NSDate new];
+//		
+//		NSDateFormatter *dateForm = [[NSDateFormatter alloc] init];
+//		
+//		dateForm.dateFormat = @"yyyyMMdd HHmmss";
+//		
+//		NSString *str_date = [dateForm stringFromDate: now_date];*/
+//		
+//		[audioRec play];
+//		
+//	}
 	
 }
 
 - (void)rokuon_Timer: (NSTimer*)timer
 {
 
-	NSTimeInterval time = [audioRec time];
-
-	NSInteger hh = time / ( 60 * 60 );
-	
-	time -= hh * 60 * 60;
-	
-	NSInteger mm = time / 60;
-	
-	time -= mm * 60 * 60;
-
-	NSInteger ss = time;
-	
-	NSString *str_time = [NSString stringWithFormat: @"%d:%d:%d", hh, mm, ss];
+//	NSTimeInterval time = [audioRec time];
+//
+//	NSInteger hh = time / ( 60 * 60 );
+//	
+//	time -= hh * 60 * 60;
+//	
+//	NSInteger mm = time / 60;
+//	
+//	time -= mm * 60 * 60;
+//
+//	NSInteger ss = time;
+//	
+//	NSString *str_time = [NSString stringWithFormat: @"%d:%d:%d", hh, mm, ss];
 	
 	//self.label_Timer.text = str_time;
 	
